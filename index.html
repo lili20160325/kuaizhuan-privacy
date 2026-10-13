@@ -5,183 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>快转视频转换器 - 隐私政策</title>
   <style>
-    :root { color-scheme: light; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      line-height: 1.75;
-      color: #222;
-      background: #f6f7f9;
-    }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 24px 18px 48px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.8;
+      color: #333;
       background: #fff;
-      min-height: 100vh;
-      box-sizing: border-box;
+      padding: 20px 16px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 15px;
     }
     h1 {
-      font-size: 1.45rem;
-      margin: 0 0 8px;
-      font-weight: 700;
+      font-size: 1.35rem;
+      text-align: center;
+      margin: 8px 0 16px;
     }
-    .meta {
-      color: #666;
-      font-size: 0.92rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-size: 1.1rem;
-      margin: 28px 0 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #eee;
-    }
-    p, li { font-size: 0.98rem; }
-    ul { padding-left: 1.25em; }
+    .dates { color: #666; font-size: 0.92rem; margin-bottom: 16px; }
+    h2 { font-size: 1.05rem; margin: 22px 0 8px; }
+    p { margin: 8px 0; }
+    ol, ul { padding-left: 1.4em; margin: 8px 0; }
     li { margin: 6px 0; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.92rem;
-      margin: 10px 0 16px;
-    }
-    th, td {
-      border: 1px solid #e5e5e5;
-      padding: 8px 10px;
-      text-align: left;
-      vertical-align: top;
-    }
-    th { background: #fafafa; }
-    .note {
-      background: #f8fafc;
-      border: 1px solid #e8eef5;
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin: 14px 0;
-      font-size: 0.95rem;
-    }
-    a { color: #1565c0; word-break: break-all; }
-    footer {
-      margin-top: 36px;
-      padding-top: 16px;
-      border-top: 1px solid #eee;
-      color: #888;
-      font-size: 0.88rem;
+    .box {
+      background: #f7f8fa;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin: 12px 0;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>快转视频转换器 隐私政策</h1>
-    <div class="meta">
-      <div>应用名称：快转视频转换器</div>
-      <div>应用包名：com.kuaizhuan.videoconverter</div>
-      <div>运营者：个人开发者（li li / 快转）</div>
-      <div>生效日期：2026年10月13日</div>
-    </div>
-
-    <div class="note">
-      本应用主要功能为在设备本地进行视频格式转换、压缩与导出。
-      <strong>视频处理在您的设备本地完成，不会将您的视频上传至服务器。</strong>
-      本应用主要功能不依赖联网收集个人信息。
-    </div>
-
-    <h2>一、我们如何处理您的信息</h2>
-    <p>
-      「快转视频转换器」是一款本地工具类应用。您选择的视频文件仅在本机读取、转换并保存到本地存储。
-      本应用<strong>不提供账号注册/登录</strong>，也<strong>不会收集、上传或存储您的视频内容</strong>至开发者服务器。
-    </p>
-    <p>本政策中的「个人信息」含义与适用的中国法律法规一致。就本应用当前功能而言：</p>
-    <ul>
-      <li>不收集姓名、手机号、身份证号、邮箱等身份信息；</li>
-      <li>不上传您选择或导出的视频文件；</li>
-      <li>不在设备外建立用户画像或行为档案。</li>
-    </ul>
-
-    <h2>二、权限说明</h2>
-    <p>为完成本地转换与进度提示，应用可能申请以下系统权限（具体以您设备系统版本及实际弹窗为准）：</p>
-    <table>
-      <thead>
-        <tr>
-          <th>权限</th>
-          <th>用途</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>读取外部存储<br/>READ_EXTERNAL_STORAGE</td>
-          <td>读取您主动选择的本地视频，用于格式转换或压缩。主要用于 Android 9 及以下系统。</td>
-        </tr>
-        <tr>
-          <td>写入外部存储<br/>WRITE_EXTERNAL_STORAGE</td>
-          <td>将转换后的视频保存到本地相册或下载目录。主要用于 Android 9 及以下系统。Android 10 及以上通常通过分区存储 / MediaStore 保存，不再依赖该权限弹窗。</td>
-        </tr>
-        <tr>
-          <td>发送通知<br/>POST_NOTIFICATIONS</td>
-          <td>在转换进行中展示进度与状态，转换完成后提示结果。不用于营销推送。</td>
-        </tr>
-        <tr>
-          <td>前台服务<br/>FOREGROUND_SERVICE<br/>（及系统相关前台服务类型）</td>
-          <td>在较长时间转换任务中以前台服务方式运行，配合通知显示进度，降低被系统回收导致任务中断的风险。</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      您可在系统设置中管理上述权限。拒绝存储相关权限可能导致无法选择或保存视频；拒绝通知权限不影响本地转换本身，但可能无法看到进度/完成通知。
-    </p>
-
-    <h2>三、我们收集哪些信息</h2>
-    <ul>
-      <li><strong>视频文件：</strong>仅在本机处理，不会上传。</li>
-      <li><strong>设备上的转换结果文件：</strong>保存在您设备本地，由您自行管理、分享或删除。</li>
-      <li><strong>账号信息：</strong>不收集（无登录）。</li>
-      <li><strong>通讯录、精确位置、短信等：</strong>不申请、不收集。</li>
-    </ul>
-    <p>
-      本应用主要功能不依赖联网收集个人信息。若后续版本因系统更新检测、应用分发或合规需要而使用网络，仍不会因此上传您的视频内容；如功能或第三方组件发生实质变化，我们将更新本政策。
-    </p>
-
-    <h2>四、信息共享、转让与公开披露</h2>
-    <p>
-      我们不会将您的视频或个人信息出售给第三方。因本应用不上传视频、不建立账号体系，不存在向第三方共享您视频内容的情形。
-      法律法规要求、或为保护用户与公众安全所必需的情形除外。
-    </p>
-
-    <h2>五、信息存储与安全</h2>
-    <p>
-      与转换相关的文件保存在您的设备本地存储中。请妥善保管设备与导出文件。
-      卸载应用不会自动删除您已导出到相册/下载目录的文件，您可自行删除。
-    </p>
-
-    <h2>六、未成年人保护</h2>
-    <p>
-      本应用面向一般用户提供本地工具功能。若您是未成年人，请在监护人指导下使用，并请监护人阅读本政策。
-      我们不会主动收集未成年人的个人信息。
-    </p>
-
-    <h2>七、您的权利</h2>
-    <ul>
-      <li>您可随时在系统设置中关闭通知或相关存储权限；</li>
-      <li>您可删除本机已保存的转换结果文件；</li>
-      <li>您可卸载本应用以停止使用。</li>
-    </ul>
-
-    <h2>八、本政策的更新</h2>
-    <p>
-      我们可能适时修订本政策。更新后将在本页面公布，并以更新日期为准。若涉及重大变更，我们将通过应用内提示或应用商店更新说明等方式尽量告知。
-    </p>
-
-    <h2>九、联系我们</h2>
-    <p>
-      如对本隐私政策或个人信息处理有疑问，请通过应用商店私信联系开发者（个人开发者：li li / 快转），或在应用商店该应用详情页留言，我们将尽快回复。
-    </p>
-
-    <footer>
-      © 快转视频转换器 · 个人开发者（li li / 快转）<br />
-      包名：com.kuaizhuan.videoconverter · 生效日期：2026-10-13
-    </footer>
+  <h1>快转视频转换器 — 隐私政策</h1>
+  <div class="dates">
+    版本日期：2026年10月13日<br />
+    生效日期：2026年10月13日
   </div>
+
+  <p>
+    在此特别提醒您（用户）在使用「快转视频转换器」（包名：<strong>com.kuaizhuan.videoconverter</strong>）之前，请认真阅读本《隐私政策》，确保您充分理解各条款。请您审慎阅读并选择接受或不接受本政策。您下载、安装、使用本应用的行为，将视为您已阅读并同意本政策。
+  </p>
+
+  <div class="box">
+    <strong>运营者：</strong>个人开发者（li li / 快转）<br />
+    <strong>应用名称：</strong>快转视频转换器<br />
+    <strong>应用包名：</strong>com.kuaizhuan.videoconverter<br />
+    本应用为本地视频转换工具，主要功能不依赖联网收集个人信息。视频格式转换、压缩与导出均在您的设备本地完成，不会将您的视频上传至服务器。本应用不提供账号注册或登录。
+  </div>
+
+  <h2>第一 信息的收集</h2>
+  <p>
+    我们收集或访问设备信息的目的，仅限于为您提供本地视频转换服务所必需，并遵循合法、正当、必要原则。就本应用当前功能而言，我们不会收集姓名、手机号、身份证号等身份信息，也不会上传您选择或导出的视频文件。
+  </p>
+  <p>为实现核心功能，应用可能申请以下权限（以您设备系统版本及实际弹窗为准）：</p>
+  <ol>
+    <li>
+      <strong>读取外部存储（READ_EXTERNAL_STORAGE）</strong><br />
+      用途：读取您主动选择的本地视频，用于格式转换或压缩。主要用于 Android 9 及以下系统；更高版本通常通过系统文件选择器访问您指定的文件。
+    </li>
+    <li>
+      <strong>写入外部存储（WRITE_EXTERNAL_STORAGE）</strong><br />
+      用途：将转换后的视频保存到本地相册或下载目录。主要用于 Android 9 及以下系统；Android 10 及以上通常通过分区存储 / MediaStore 保存。
+    </li>
+    <li>
+      <strong>发送通知（POST_NOTIFICATIONS）</strong><br />
+      用途：在转换进行中展示进度与状态，转换完成后提示结果。不用于营销推送。
+    </li>
+    <li>
+      <strong>前台服务（FOREGROUND_SERVICE 及相关类型）</strong><br />
+      用途：在较长时间转换任务中以前台服务方式运行，配合通知显示进度，降低被系统回收导致任务中断的风险。
+    </li>
+  </ol>
+  <p>
+    您可在系统设置中管理上述权限。拒绝存储相关权限可能导致无法选择或保存视频；拒绝通知权限不影响本地转换本身，但可能无法看到进度/完成通知。
+  </p>
+  <p>
+    在法律法规允许的范围内，我们可能在下列情形中处理相关信息而无需另行征得授权同意：与国家安全、公共安全、刑事司法等有关的；您自行向社会公众公开的信息；法律法规规定的其他情形。
+  </p>
+
+  <h2>第二 信息的管理与存储</h2>
+  <ol>
+    <li>与转换相关的视频文件仅保存在您的设备本地，由您自行管理、分享或删除。我们不会将上述文件上传至开发者服务器。</li>
+    <li>本应用不建立用户账号体系，因此不存在服务端账号数据存储。</li>
+    <li>卸载应用不会自动删除您已导出到相册或下载目录的文件，您可自行删除。</li>
+  </ol>
+
+  <h2>第三 信息共享与对外提供</h2>
+  <p>
+    我们不会出售您的视频或个人信息。因本应用不上传视频、不建立账号体系，不存在向第三方共享您视频内容的情形。法律法规要求，或为保护用户与公众安全所必需的情形除外。
+  </p>
+
+  <h2>第四 隐私保护</h2>
+  <p>
+    请妥善保管您的设备与导出文件。如发现他人利用本应用从事违法违规活动，您可通过应用商店私信联系开发者。我们有权在法律法规允许范围内采取必要措施。
+  </p>
+
+  <h2>第五 未成年人保护</h2>
+  <p>
+    本应用面向一般用户提供本地工具功能。未成年人应在监护人指导下阅读本政策并使用本应用。我们不会主动收集未成年人的个人信息。
+  </p>
+
+  <h2>第六 本政策的更新</h2>
+  <p>
+    我们可能适时修订本政策。更新后将在本页面公布，并以更新日期为准。若您不接受修改后的条款，请停止使用本应用；继续使用将视为接受更新后的政策。
+  </p>
+
+  <h2>第七 其他须知</h2>
+  <ol>
+    <li>本政策的效力、解释及争议解决适用中华人民共和国法律。发生争议时，双方应友好协商；协商不成的，提交有管辖权的人民法院解决。</li>
+    <li>本政策任一条款被认定无效的，不影响其余条款的效力。</li>
+  </ol>
+
+  <h2>第八 联系我们</h2>
+  <p>
+    如对本隐私政策有疑问，请通过应用商店私信联系开发者（个人开发者：li li / 快转），或在应用商店该应用详情页留言，我们将尽快回复。
+  </p>
+
+  <p style="margin-top:28px;color:#888;font-size:0.9rem;">
+    © 快转视频转换器 · 个人开发者（li li / 快转）<br />
+    包名：com.kuaizhuan.videoconverter
+  </p>
 </body>
 </html>
