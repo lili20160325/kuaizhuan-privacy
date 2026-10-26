@@ -20,6 +20,7 @@
     h1 { font-size: 1.35rem; text-align: center; margin: 8px 0 16px; }
     .dates { color: #666; font-size: 0.92rem; margin-bottom: 16px; }
     h2 { font-size: 1.05rem; margin: 22px 0 8px; }
+    h3 { font-size: 1rem; margin: 16px 0 8px; }
     p { margin: 8px 0; }
     ol, ul { padding-left: 1.4em; margin: 8px 0; }
     li { margin: 6px 0; }
@@ -29,13 +30,26 @@
       padding: 10px 12px;
       margin: 12px 0;
     }
+    table.pi {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 10px 0 16px;
+    }
+    table.pi th, table.pi td {
+      border: 1px solid #e5e6eb;
+      padding: 8px 6px;
+      vertical-align: top;
+      text-align: left;
+    }
+    table.pi th { background: #f2f3f5; }
   </style>
 </head>
 <body>
   <h1>快转GIF制作 — 隐私政策</h1>
   <div class="dates">
-    版本日期：2026年10月22日<br />
-    生效日期：2026年10月22日
+    版本日期：2026年10月26日<br />
+    生效日期：2026年10月26日
   </div>
 
   <p>
@@ -60,6 +74,9 @@
   <p>
     我们收集或访问设备信息的目的，仅限于为您提供本地 GIF 制作服务与广告展示所必需，并遵循合法、正当、必要原则。就本应用核心功能而言，我们不会收集姓名、手机号、身份证号等身份信息，也不会上传您选择或导出的媒体文件。
   </p>
+  <p>
+    <strong>重要说明：</strong>仅在您阅读本政策并点击「同意」之后，本应用才会初始化 vivo 广告联盟 SDK，并按其配置处理广告相关信息。未同意前，不初始化广告 SDK，不出于广告目的收集下述标识符类信息。
+  </p>
   <p>为实现核心功能与广告服务，应用可能申请或使用以下权限（以您设备系统版本及实际弹窗为准）：</p>
   <ol>
     <li>
@@ -76,11 +93,165 @@
     </li>
     <li>
       <strong>其他广告相关权限（如 REQUEST_INSTALL_PACKAGES、WAKE_LOCK、READ_PHONE_STATE）</strong><br />
-      用途：分别用于广告应用安装引导、视频广告播放保活，以及在合法合规前提下辅助广告归因。本应用不会在您同意本政策前初始化广告 SDK，也不会主动在同意前弹窗索取无关敏感权限。
+      用途：分别用于广告应用安装引导、视频广告播放保活。清单中虽声明 READ_PHONE_STATE 供广告 SDK 兼容，但本应用已通过 VCustomController 关闭电话状态（IMEI 等）、IMSI、MAC、应用安装列表、定位的使用，不实际读取这些信息。本应用不会在您同意本政策前初始化广告 SDK，也不会主动在同意前弹窗索取无关敏感权限。
     </li>
   </ol>
   <p>
     您可在系统设置中管理上述权限。选择文件不依赖存储读取权限。在较旧系统上若拒绝写入权限，则无法「保存到相册」，但不影响本地制作与分享。
+  </p>
+
+  <h3>个人信息处理的目的、方式和范围</h3>
+  <p>
+    为便于您清楚了解本应用对各类个人信息的处理情况，现就应用商店审校关注的个人信息逐项说明如下。除下表「是否收集」为「是」或「仅本机处理」的项目外，本应用业务代码与已配置的广告 SDK 控制器均<strong>不收集、不使用</strong>对应信息。
+  </p>
+  <table class="pi">
+    <thead>
+      <tr>
+        <th>个人信息</th>
+        <th>是否收集</th>
+        <th>目的</th>
+        <th>方式</th>
+        <th>范围</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Android ID</td>
+        <td>是（同意后）</td>
+        <td>广告投放、监测归因、反作弊</td>
+        <td>您同意本政策后，由 vivo 广告联盟 SDK 读取（本应用 VCustomController 中 isCanUseAndroidId=true）</td>
+        <td>仅用于本应用内广告服务；不用于上传您的媒体文件；不向本公司服务器上传媒体</td>
+      </tr>
+      <tr>
+        <td>OAID</td>
+        <td>是（同意后）</td>
+        <td>广告投放、监测归因、反作弊</td>
+        <td>您同意本政策后，由 vivo 广告联盟 SDK 按其规则获取设备广告标识</td>
+        <td>仅用于本应用内广告服务；不用于上传您的媒体文件</td>
+      </tr>
+      <tr>
+        <td>一般设备与网络信息（如设备型号、系统版本、网络类型、IP 等）</td>
+        <td>是（同意后）</td>
+        <td>广告投放、监测归因、反作弊、保障广告服务稳定</td>
+        <td>您同意本政策后由广告 SDK 处理（本应用允许使用 IP：isCanUseIp=true）</td>
+        <td>仅用于本应用内广告服务；不用于上传媒体文件</td>
+      </tr>
+      <tr>
+        <td>IMEI</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用。已关闭电话状态相关能力（isCanUsePhoneState=false）</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>IMSI</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用（isCanUseImsi=false）</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>设备 MAC 地址</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用（isCanUseMac=false）</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>MEID</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用；业务代码与广告控制器均不读取</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>ICCID</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>SN（设备序列号）</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>SUPI / SUCI</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>软件安装列表</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用（isCanUseApplist=false）</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>位置信息</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用（isCanUseLocation=false）；不申请定位权限用于业务或广告</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>联系人</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用；不申请通讯录权限</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>通话记录</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>日历</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>短信</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>本机电话号码</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不使用；已关闭电话状态相关能力</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>剪切板</td>
+        <td>否</td>
+        <td>—</td>
+        <td>不收集、不读取剪切板内容</td>
+        <td>本应用不处理</td>
+      </tr>
+      <tr>
+        <td>图片、音视频</td>
+        <td>仅本机处理（非上传收集）</td>
+        <td>供您在本机制作 GIF（视频转 GIF、图片合成 GIF、裁剪与编辑）</td>
+        <td>仅当您主动通过系统文件选择器 / Photo Picker 选择当次文件后，在设备本地读取并处理；不扫描全部相册</td>
+        <td>仅限于您当次选择的文件；处理结果保存在应用私有目录供预览/分享；<strong>不会上传至本公司服务器</strong>；仅在您点击「保存到相册」并同意后，才将本次生成的 GIF 写入系统相册</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    上表中「是否收集」为「否」的项目，本应用不会在同意前后予以收集或使用。Android ID、OAID 及一般设备/网络信息仅在您同意本政策、广告 SDK 初始化之后，为广告服务所使用。
   </p>
 
   <h2>第二 第三方 SDK 说明</h2>
@@ -89,7 +260,11 @@
     <strong>SDK 名称：</strong>vivo 广告联盟 SDK<br />
     <strong>开发者：</strong>广东天宸网络科技有限公司<br />
     <strong>使用目的：</strong>广告投放、监测归因、反作弊、统计分析及保障广告服务稳定<br />
-    <strong>收集/使用的信息类型（由该 SDK 按其规则处理，可能包括）：</strong>设备信息（如设备制造商、型号、系统版本）、网络信息、标识符（如 OAID、AndroidId；在合规允许范围内可能涉及 IMEI）、应用基础信息、广告互动行为、崩溃与性能数据等<br />
+    <strong>处理个人信息的目的、方式、范围：</strong><br />
+    · <strong>OAID</strong>：目的为广告投放/监测归因/反作弊；方式为您同意本政策后由本 SDK 获取；范围仅限本应用内广告服务，不用于上传用户媒体。<br />
+    · <strong>Android ID</strong>：目的同上；方式为您同意后由本 SDK 读取（本应用明确允许 isCanUseAndroidId=true）；范围仅限本应用内广告服务。<br />
+    · <strong>一般设备与网络信息</strong>（如型号、系统版本、网络状态、IP 等）：目的同上；方式为同意后由本 SDK 处理（本应用允许 isCanUseIp=true）；范围仅限广告服务。<br />
+    · <strong>不使用</strong>：IMEI、IMSI、设备 MAC 地址、软件安装列表、位置信息等。本应用已通过 VCustomController 关闭：isCanUsePhoneState=false、isCanUseImsi=false、isCanUseMac=false、isCanUseApplist=false、isCanUseLocation=false、isCanUseWriteExternal=false。<br />
     <strong>隐私政策：</strong><a href="https://adnet.vivo.com.cn/home/agreement/18" target="_blank" rel="noopener">https://adnet.vivo.com.cn/home/agreement/18</a>
   </div>
   <p>
