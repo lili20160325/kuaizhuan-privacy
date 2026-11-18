@@ -48,8 +48,8 @@
 <body>
   <h1>快转视频转换器 — 隐私政策</h1>
   <div class="dates">
-    版本日期：2026年10月28日<br />
-    生效日期：2026年10月28日
+    版本日期：2026年11月18日<br />
+    生效日期：2026年11月18日
   </div>
 
   <p>
@@ -63,7 +63,7 @@
     <strong>联系电话：</strong><a href="tel:18805050598">18805050598</a><br />
     <strong>应用名称：</strong>快转视频转换器<br />
     <strong>应用包名：</strong>com.kuaizhuan.videoconverter<br />
-    本应用为本地视频转换工具。视频格式转换、压缩与导出均在您的设备本地完成，不会将您的媒体文件上传至本公司服务器。本应用不提供账号注册或登录。为展示广告，本应用在您同意本政策后会初始化第三方广告 SDK（vivo 广告联盟），并使用网络相关权限。首次启动时的提示仅为摘要：选视频/音频走系统选择器，保存到相册时才会申请写入相关权限，均在本机处理；个人信息处理的目的、方式与范围、权限与第三方 SDK 细节见本页下文，不以弹窗罗列全部标识符。
+    本应用为本地视频转换工具。视频格式转换、压缩与导出均在您的设备本地完成，不会将您的媒体文件上传至本公司服务器。本应用不提供账号注册或登录。为展示广告，本应用在您同意本政策后会初始化第三方广告 SDK（OPPO 广告联盟），并使用网络相关权限。首次启动时的提示仅为摘要：选视频/音频走系统选择器，保存到相册时才会申请写入相关权限，均在本机处理；个人信息处理的目的、方式与范围、权限与第三方 SDK 细节见本页下文，不以弹窗罗列全部标识符。
   </div>
 
   <p>
@@ -75,7 +75,7 @@
     我们收集或访问设备信息的目的，仅限于为您提供本地视频转换/压缩服务与广告展示所必需，并遵循合法、正当、必要原则。就本应用核心功能而言，我们不会收集姓名、手机号、身份证号等身份信息，也不会上传您选择或导出的媒体文件。
   </p>
   <p>
-    <strong>重要说明：</strong>仅在您阅读本政策并点击「同意」之后，本应用才会初始化 vivo 广告联盟 SDK，并按其配置处理广告相关信息。未同意前，不初始化广告 SDK，不出于广告目的收集下述标识符类信息。
+    <strong>重要说明：</strong>仅在您阅读本政策并点击「同意」之后，本应用才会初始化 OPPO 广告联盟 SDK，并按其配置处理广告相关信息。未同意前，不初始化广告 SDK，不出于广告目的收集下述标识符类信息。
   </p>
   <p>为实现核心功能与广告服务，应用可能申请或使用以下权限（以您设备系统版本及实际申请时机为准；首启弹窗不逐项罗列，细节以本页为准）：</p>
   <ol>
@@ -100,8 +100,8 @@
       用途：在您同意本政策后，用于广告请求、展示、监测归因与反作弊。不会用于上传您的媒体文件。
     </li>
     <li>
-      <strong>其他广告相关权限（如 REQUEST_INSTALL_PACKAGES、WAKE_LOCK、READ_PHONE_STATE）</strong><br />
-      用途：分别用于广告应用安装引导、视频广告播放保活。清单中虽声明 READ_PHONE_STATE 供广告 SDK 兼容，但本应用已通过 VCustomController 关闭电话状态（IMEI 等）、IMSI、MAC、应用安装列表、定位、写外置存储的使用，不实际读取这些信息。本应用不会在您同意本政策前初始化广告 SDK，也不会主动在同意前弹窗索取无关敏感权限。
+      <strong>其他广告相关权限（如 REQUEST_INSTALL_PACKAGES、WAKE_LOCK）</strong><br />
+      用途：分别用于广告应用安装引导、视频广告播放保活。本应用已通过 MobCustomController 关闭电话状态（IMEI 等）、MAC、应用安装列表、定位、传感器、写外置存储与 WiFi 地址的使用，不实际读取这些信息；不申请 READ_PHONE_STATE、定位权限与 QUERY_ALL_PACKAGES。本应用不会在您同意本政策前初始化广告 SDK，也不会主动在同意前弹窗索取无关敏感权限。
     </li>
   </ol>
   <p>
@@ -127,21 +127,28 @@
         <td>Android ID</td>
         <td>是（同意后）</td>
         <td>广告投放、监测归因、反作弊</td>
-        <td>您同意本政策后，由 vivo 广告联盟 SDK 读取（本应用 VCustomController 中 isCanUseAndroidId=true）</td>
+        <td>您同意本政策后，由 OPPO 广告联盟 SDK 读取（本应用 MobCustomController 中 isCanUseAndroidId=true）</td>
         <td>仅用于本应用内广告服务；不用于上传您的媒体文件；不向本公司服务器上传媒体</td>
       </tr>
       <tr>
         <td>OAID</td>
         <td>是（同意后）</td>
         <td>广告投放、监测归因、反作弊</td>
-        <td>您同意本政策后，由 vivo 广告联盟 SDK 按其规则获取设备广告标识</td>
+        <td>您同意本政策后，由 OPPO 广告联盟 SDK 按其规则获取 OAID（基础广告必要标识）</td>
+        <td>仅用于本应用内广告服务；不用于上传您的媒体文件</td>
+      </tr>
+      <tr>
+        <td>VAID</td>
+        <td>是（广告必要标识）</td>
+        <td>广告投放、监测归因、反作弊</td>
+        <td>您同意本政策后，由 OPPO 广告联盟 SDK 按其规则获取 VAID（基础广告必要标识）</td>
         <td>仅用于本应用内广告服务；不用于上传您的媒体文件</td>
       </tr>
       <tr>
         <td>一般设备与网络信息（如设备型号、系统版本、网络类型、IP 等）</td>
         <td>是（同意后）</td>
         <td>广告投放、监测归因、反作弊、保障广告服务稳定</td>
-        <td>您同意本政策后由广告 SDK 处理（本应用允许使用 IP：isCanUseIp=true；允许个性化推荐：isCanPersonalRecommend=true）</td>
+        <td>您同意本政策后由广告 SDK 处理基础广告必要设备信息（机型、品牌、系统版本、屏幕分辨率）及广告操作记录；本应用已关闭个性化广告开关（setAppOUIDStatus=false）</td>
         <td>仅用于本应用内广告服务；不用于上传媒体文件</td>
       </tr>
       <tr>
@@ -259,21 +266,22 @@
     </tbody>
   </table>
   <p>
-    上表中「是否收集」为「否」的项目，本应用不会在同意前后予以收集或使用。Android ID、OAID 及一般设备/网络信息仅在您同意本政策、广告 SDK 初始化之后，为广告服务所使用。
+    上表中「是否收集」为「否」的项目，本应用不会在同意前后予以收集或使用。Android ID、OAID、VAID 及基础广告必要的一般设备信息（机型、品牌、系统版本、屏幕分辨率）与广告操作记录，仅在您同意本政策、广告 SDK 初始化之后，为广告服务所使用。本包未开启个性化广告。
   </p>
 
   <h2>第二 第三方 SDK 说明</h2>
   <p>为向您展示开屏、插屏、激励视频等广告，本应用在您同意本政策后接入以下第三方 SDK：</p>
   <div class="box">
-    <strong>SDK 名称：</strong>vivo 广告联盟 SDK<br />
-    <strong>开发者：</strong>广东天宸网络科技有限公司<br />
-    <strong>使用目的：</strong>广告投放、监测归因、反作弊、统计分析及保障广告服务稳定<br />
+    <strong>SDK 名称：</strong>OPPO 广告联盟 SDK<br />
+    <strong>开发者：</strong>广东欢太科技有限公司<br />
+    <strong>使用目的：</strong>广告投放、监测归因、反作弊及保障广告服务稳定<br />
     <strong>处理个人信息的目的、方式、范围：</strong><br />
-    · <strong>OAID</strong>：目的为广告投放/监测归因/反作弊；方式为您同意本政策后由本 SDK 获取；范围仅限本应用内广告服务，不用于上传用户媒体。<br />
+    · <strong>OAID、VAID</strong>：基础广告必要标识；目的为广告投放/监测归因/反作弊；方式为您同意本政策后由本 SDK 获取；范围仅限本应用内广告服务，不用于上传用户媒体。<br />
     · <strong>Android ID</strong>：目的同上；方式为您同意后由本 SDK 读取（本应用明确允许 isCanUseAndroidId=true）；范围仅限本应用内广告服务。<br />
-    · <strong>一般设备与网络信息</strong>（如型号、系统版本、网络状态、IP 等）：目的同上；方式为同意后由本 SDK 处理（本应用允许 isCanUseIp=true；允许 isCanPersonalRecommend=true）；范围仅限广告服务。<br />
-    · <strong>不使用</strong>：IMEI、IMSI、设备 MAC 地址、软件安装列表、位置信息等。本应用已通过 VCustomController 关闭：isCanUsePhoneState=false、isCanUseImsi=false、isCanUseMac=false、isCanUseApplist=false、isCanUseLocation=false、isCanUseWriteExternal=false。<br />
-    <strong>隐私政策：</strong><a href="https://adnet.vivo.com.cn/home/agreement/18" target="_blank" rel="noopener">https://adnet.vivo.com.cn/home/agreement/18</a>
+    · <strong>一般设备信息</strong>（机型、品牌、系统版本、屏幕分辨率）及<strong>广告操作记录</strong>：基础广告必要信息；方式为同意后由本 SDK 处理；范围仅限广告服务。<br />
+    · <strong>不使用 / 本包未开启</strong>：IMEI、设备 MAC 地址、软件安装列表、位置信息、传感器、外部存储、个性化广告推荐。本应用已通过 MobCustomController 关闭：isCanUsePhoneState=false、不传入 getDevImei、isCanUseWifiState=false、alist=false、isCanUseLocation=false、isSensorPermissionEnabled=false、isCanUseWriteExternal=false；初始化时 setAppOUIDStatus=false（关闭个性化开关）、setDebug=false。<br />
+    <strong>官方隐私政策：</strong><a href="https://u.oppomobile.com/home/_book/%E6%8E%A5%E5%85%A5%E6%8C%87%E5%BC%95/OPPO%E5%B9%BF%E5%91%8A%E8%81%94%E7%9B%9F%E9%9A%90%E7%A7%81%E5%8D%8F%E8%AE%AE.html" target="_blank" rel="noopener">https://u.oppomobile.com/home/_book/%E6%8E%A5%E5%85%A5%E6%8C%87%E5%BC%95/OPPO%E5%B9%BF%E5%91%8A%E8%81%94%E7%9B%9F%E9%9A%90%E7%A7%81%E5%8D%8F%E8%AE%AE.html</a><br />
+    该第三方政策更新日期、生效日期均为 2026年7月8日。
   </div>
   <p>
     我们仅在您点击「同意」本政策后初始化上述 SDK。若您不同意本政策，将无法使用本应用。您可通过系统设置限制相关权限；限制后可能导致广告无法正常展示，但不影响本地转换主流程（激励场景除外：激励视频为获取转换次数等功能的一部分，需观看后继续）。
